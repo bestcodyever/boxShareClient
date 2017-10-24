@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import MapView from './components/mapComponent'
 
 class App extends Component {
   render() {
@@ -7,13 +8,17 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <br></br>
-          <br></br>
-          <br></br>
+
           <h1 className="App-title">Welcome to bxShr</h1>
         </header>
         <p className="App-intro">
-          App coming soon...
+          <div className="map">
+          <MapView />
+          </div>
         </p>
+        <footer className="App-footer">
+
+        </footer>
       </div>
     );
   }
