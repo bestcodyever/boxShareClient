@@ -1,37 +1,76 @@
-.App {
-  text-align: center;
-  background-color: #FFF8DC;
+body {
+  background-color: #FFF8DC !important;
+  padding: 0;
+  margin: 0
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.title {
+  color: black !important;
+  font-size: 2em;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 8vh;
 }
 
-.App-header {
-  background-color: #D2B48C	;
+div.col-md-10.col-md-offset-1.col-sm-12.col-sm-offset-1 {
+  margin-bottom: 80px;
+}
+
+.header {
+  background-color: #D2B48C !important;
+  border-color: #D2B48C !important;
+  height: 12vh;
+  padding: 20px;
+  color: #FFF8DC !important;
+  border-radius: 0 !important;
+  margin-bottom: 0.5rem !important;
+  
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
   height: 75px;
-  padding: 20px;
-  color: white;
-}
-.App-footer {
-  background-color: #D2B48C	;
-  height: 40px;
-  padding: 20px;
-  color: white;
-}
-.App-title {
-  font-size: 1.5em;
+  width: 100vw;
+  background-color: #D2B48C;
 }
 
-.App-intro {
-  font-size: large;
+.footer p {
+  margin-left: 12rem;
+  margin-top: 2rem;
 }
+
 .map {
+  margin-top: 3vh;
+}
+
+.routeDiv {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+#root>div>div.login-container>div {
+  padding: 10rem 0 0 10rem;
+  width: 30%;
+  min-width: 100px;
+}
+
+.modal-container {
+  position: relative;
+}
+
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
 }

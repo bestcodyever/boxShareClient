@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import MapView from './components/mapComponent'
+import Header from './components/header'
+import Footer from './components/footer'
+import logo from './images/logo.png'
+import { Route } from 'react-router-dom'
+import mapComponent from './components/mapComponent'
+import login from './components/login'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <br></br>
+      <div className="app">
+        <Header logo={logo}/>
+        <Route path="/login" component={login}/>
+        <div className="routeDiv">
+          <Route exact path="/" component={mapComponent}/>
+        </div>
+        <Footer/>
 
-          <h1 className="App-title">Welcome to bxShr</h1>
-        </header>
-        <p className="App-intro">
-          <div className="map">
-          <MapView />
-          </div>
-        </p>
-        <footer className="App-footer">
-
-        </footer>
       </div>
     );
   }
