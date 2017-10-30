@@ -4,8 +4,8 @@ import Header from './components/header'
 import Footer from './components/footer'
 import logo from './images/logo.png'
 import { Route } from 'react-router-dom'
-import mapComponent from './components/mapComponent'
 import login from './components/login'
+import mainView from './components/mainView'
 
 class App extends Component {
   render() {
@@ -13,9 +13,7 @@ class App extends Component {
       <div className="app">
         <Header logo={logo}/>
         <Route path="/login" component={login}/>
-        <div className="routeDiv">
-          <Route exact path="/" component={mapComponent}/>
-        </div>
+          <Route exact path="/" component={mainView}/>
         <Footer/>
 
       </div>

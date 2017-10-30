@@ -1,7 +1,8 @@
 import React from 'react'
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import Trigger from './email'
-const baseURL = 'http://localhost:8080'
+
+const baseURL = 'http://localhost:8080/boxes'
 const position = [39.742043, -104.991531]
 
 export class MapView extends React.Component {
@@ -13,14 +14,13 @@ export class MapView extends React.Component {
     }
   }
   async componentDidMount() {
-    const data = await fetch(`${baseURL}/boxes`)
+    const data = await fetch(`${baseURL}`)
     const response = await data.json()
     this.setState({
       boxes: response.map(box => {
         return box
       })
     })
-    // console.log(this.state.boxes);
   }
   render() {
     const createMarker = ()=>{

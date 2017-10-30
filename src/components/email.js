@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal, Button, OverlayTrigger, Popover, Tooltip} from 'react-bootstrap/lib/'
+import {Modal, Button} from 'react-bootstrap/lib/'
 
 export class Trigger extends React.Component {
 
