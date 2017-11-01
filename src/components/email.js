@@ -21,7 +21,7 @@ export class Trigger extends React.Component {
   render() {
     return (
       <div>
-        <Button bsStyle="primary" bsSize="small" onClick={this.open.bind(this)}>
+        <Button bsStyle="primary" bsSize="sm" onClick={this.open.bind(this)}>
           Email User
         </Button>
 
