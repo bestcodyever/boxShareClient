@@ -89,9 +89,6 @@ export class MainView extends React.Component {
         })
       }
 
-      // console.log(`${baseURL}/create?name=${this.state.name}&email=${this.state.email}&description=${this.state.description}&long=${this.state.long}&lat=${this.state.lat}`);
-
-
     const addressCall = () => {
       fetch(`${addressURL}${this.state.address}&key=AIzaSyDrxcNgf1LpXGCKbQpFUswLCgHVCrRZU5c`).then(function(response) {
         return response.json();
