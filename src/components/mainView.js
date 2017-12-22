@@ -1,7 +1,6 @@
 import React from 'react'
 import AddBox from './addBox'
 import MapComponent from './mapComponent'
-// import { Trigger } from 'react-bootstrap/lib/'
 import Trigger from './email'
 import {Marker, Popup} from 'react-leaflet'
 const addressURL = 'https://maps.googleapis.com/maps/api/geocode/json?address='
@@ -17,7 +16,7 @@ export class MainView extends React.Component {
       name: '',
       description: '',
       address: '',
-      long: '',
+      lon: '',
       lat: ''
     }
   }
@@ -66,7 +65,7 @@ export class MainView extends React.Component {
         mode: 'cors',
         cache: 'default'
       }
-      fetch(`${baseURL}/create?name=${this.state.name}&email=${this.state.email}&description=${this.state.description}&long=${this.state.long}&lat=${this.state.lat}`, myInit)
+      fetch(`${baseURL}/create?name=${this.state.name}&email=${this.state.email}&description=${this.state.description}&long=${this.state.lon}&lat=${this.state.lat}`, myInit)
       .then(() => {
           const newMark = {
             Description: this.state.description,
@@ -84,7 +83,7 @@ export class MainView extends React.Component {
           name: '',
           description: '',
           address: '',
-          long: '',
+          lon: '',
           lat: ''})
         })
       }
@@ -93,7 +92,7 @@ export class MainView extends React.Component {
       fetch(`${addressURL}${this.state.address}&key=AIzaSyDrxcNgf1LpXGCKbQpFUswLCgHVCrRZU5c`).then(function(response) {
         return response.json();
       }).then((data) => {
-        this.setState({long: data.results[0].geometry.location.lat, lat: data.results[0].geometry.location.lng});
+        this.setState({lon: data.results[0].geometry.location.lat, lat: data.results[0].geometry.location.lng});
         console.log(this.state);
       })
     }

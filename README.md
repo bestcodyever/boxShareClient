@@ -1,3 +1,3 @@
 Client side for bxShr.
 
-- More features coming soon.
+- More features coming soon.  
